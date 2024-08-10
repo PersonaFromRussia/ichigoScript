@@ -1,0 +1,7 @@
+local Library = loadstring(game:HttpGet(""))()
+local Window = Library.CreateLib("Ichigo Script", "RJTheme3")
+local Tab = Window:NewTab("Ichigo Script")
+local Section = Tab:NewSection("by Person")
+Section:NewSlider("WalkSpeed", Changing WalkSpeed", 500, 0, function(s)
+game["Workspace"][LocalPlayer]["Character"]["Humanoid"].WalkSpeed = s
+end)
