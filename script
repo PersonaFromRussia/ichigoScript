@@ -1,7 +1,18 @@
-local Library = loadstring(game:HttpGet(""))()
-local Window = Library.CreateLib("Ichigo Script", "RJTheme3")
-local Tab = Window:NewTab("Ichigo Script")
-local Section = Tab:NewSection("by Person")
-Section:NewSlider("WalkSpeed", Changing WalkSpeed", 500, 0, function(s)
-game["Workspace"][LocalPlayer]["Character"]["Humanoid"].WalkSpeed = s
-end)
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "IchigoScript", HidePremium = false, SaveConfig = true, ConfigFolder = ""})
+
+local Tab = Window:MakeTab({
+	Name = "Player",
+	Icon = "",
+	PremiumOnly = false
+})
+
+Tab:AddTextbox({
+	Name = "Jump",
+	Default = "default box input",
+	TextDisappear = true,
+	Callback = function(Value)
+		print(Value)
+	end	  
+})
